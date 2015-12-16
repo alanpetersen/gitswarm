@@ -7,7 +7,6 @@
   "source": "https://github.com/alanpetersen/gitswarm",
   "project_page": "https://github.com/alanpetersen/gitswarm",
   "issues_url": "https://github.com/alanpetersen/gitswarm/issues",
-  "dependencies": [  ],
   "requirements": [
     {
       "name": "pe",
@@ -34,6 +33,6 @@
         "6",
         "7"
       ]
-    },
-  ],
+    }
+  ]
 }
