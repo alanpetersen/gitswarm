@@ -1,6 +1,6 @@
 {
   "name": "alanpetersen-gitswarm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "alanpetersen",
   "summary": "Installs and configures Perforce Gitswarm",
   "license": "Apache-2.0",

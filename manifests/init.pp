@@ -1,7 +1,7 @@
 # Class: gitswarm
 # ===========================
 #
-# Configures Perforce Gitswarm 
+# Configures Perforce Gitswarm
 #
 # Authors
 # -------
@@ -25,9 +25,9 @@ class gitswarm {
   }
 
   yumrepo { 'perforce':
-    baseurl => "http://package.perforce.com/yum/rhel/${::operatingsystemmajrelease}/x86_64",
-    descr => 'Perforce Repo',
-    enabled => '1',
+    baseurl  => "http://package.perforce.com/yum/rhel/${::operatingsystemmajrelease}/x86_64",
+    descr    => 'Perforce Repo',
+    enabled  => '1',
     gpgcheck => '1',
   }
 
