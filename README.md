@@ -82,8 +82,8 @@ zk.connect.timeout=300 (default)
 server: 3 (P4DEBUG)
 dm.protects.allow.admin: 1 (configure)</pre>
 
+HINT: If you don't log in before the ticket expires (12h), then you can find the generated password in the `/etc/gitswarm/gitswarm.rb` file. Do not change the gitswarm user's password without consulting the GitSwarm documentation! Bad things may happen if you do.
+
 ## Limitations
 
 Currently, only supports RedHat/CentOS. Debian coming soon.
-
-
