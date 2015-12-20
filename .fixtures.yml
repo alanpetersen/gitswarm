@@ -1,3 +1,6 @@
 fixtures:
+  repositories:
+    stdlib:  "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    apt: "https://github.com/puppetlabs/puppetlabs-apt"
   symlinks:
     gitswarm: "#{source_dir}"
