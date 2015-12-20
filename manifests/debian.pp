@@ -10,21 +10,21 @@ class gitswarm::debian (
   include apt
 
   apt::key { 'perforce-key':
-    ensure  => present,
-    id      => $p4_key_fingerprint,
-    source  => $pubkey_url,
+    ensure => present,
+    id     => $p4_key_fingerprint,
+    source => $pubkey_url,
   }
 
   apt::source { 'perforce-apt-config':
     comment  => 'This is the Perforce debian distribution configuration file',
     location => $p4_distro_location,
     release  => $p4_distro_release,
-    repos => 'release',
+    repos    => 'release',
+    require  => Apt::Key['perforce-key'],
     include  => {
       'src' => false,
       'deb' => true,
     },
-    require => Apt::Key['perforce-key'],
   }
 
   package { $pkgname:

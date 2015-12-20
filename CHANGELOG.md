@@ -1,3 +1,7 @@
+## 2015-12-20 - Release 0.2.1
+### Summary
+Added some lint fixes.
+
 ## 2015-12-20 - Release 0.2.0
 ### Summary
 Added Debian (Ubuntu) support.

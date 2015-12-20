@@ -9,14 +9,14 @@ class gitswarm::params {
   case $::osfamily {
     'redhat': {
       if !($::operatingsystemmajrelease in ['6','7']) {
-        fail("Sorry, only releases 6 and 7 are currently suppported by the gitswarm module")
+        fail('Sorry, only releases 6 and 7 are currently suppported by the gitswarm module')
       }
       $perforce_repo_name = 'perforce'
       $yum_baseurl        = "${perforce_package_url}/yum/rhel/${::operatingsystemmajrelease}/x86_64"
     }
     'debian': {
       if !($::lsbdistcodename in ['precise','trusty']) {
-        fail("Sorry, only the precise or trusty distros are currently suppported by the gitswarm module")
+        fail('Sorry, only the precise or trusty distros are currently suppported by the gitswarm module')
       }
       $p4_distro_location = "${perforce_package_url}/apt/ubuntu"
       $p4_distro_release  = $::lsbdistcodename
