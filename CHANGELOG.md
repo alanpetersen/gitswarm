@@ -1,3 +1,7 @@
+## 2015-12-21 - Release 0.2.2
+### Summary
+Cleaned up pkg to make it smaller -- was accidentally bundling testing gems
+
 ## 2015-12-20 - Release 0.2.1
 ### Summary
 Added some lint fixes.
