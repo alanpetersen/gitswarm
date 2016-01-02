@@ -7,6 +7,30 @@ Installs and configures Perforce GitSwarm. See the following for more informatio
 - [GitSwarm Install Guide](https://www.perforce.com/perforce/r15.4/user/gitswarm-install.txt)
 - [GitSwarm Manual](https://www.perforce.com/perforce/r15.3/manuals/gitswarm/)
 
+## Usage
+
+Usage is pretty simple. You can simply include the gitswarm class to configure GitSwarm on the node:
+
+~~~
+include gitswarm
+~~~
+
+The base class determines the `$::osfamily` of the node and includes the appropriate os-specific
+class: `gitswarm::debian` or `gitswarm::redhat`.
+
+If you want to customize how GitSwarm is installed, you can either use hiera to specify parameters,
+or you can declare the os-specific class with the appropriate parameters set. For example, on
+CentOS 7, you could do something like:
+
+~~~
+class { 'gitswarm::redhat':
+  pkgname            => 'helix-gitswarm',
+  pubkey_url         => 'https://package.perforce.com/perforce.pubkey',
+  yum_baseurl        => 'http://package.perforce.com/yum/rhel/7/x86_64',
+  perforce_repo_name => 'perforce',
+}
+~~~
+
 ## Post-Install
 
 The installation will create an administrative account in GitSwarm called `root` with the password `5iveL!fe`. When you log in, you will be asked to change that password to something that isn't on a README page on GitHub.
