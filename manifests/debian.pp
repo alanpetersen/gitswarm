@@ -29,7 +29,7 @@ class gitswarm::debian (
 
   package { $pkgname:
     ensure  => installed,
-    require => Apt::Source['perforce-apt-config'],
+    require => Exec['apt_update'],
   }
 
 }

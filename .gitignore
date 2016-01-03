@@ -1,4 +1,6 @@
 .git
 pkg
 spec/fixtures
-vendor/
+log*
+vendor*
+.vagrant*

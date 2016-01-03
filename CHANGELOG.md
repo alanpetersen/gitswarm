@@ -1,3 +1,8 @@
+## 2016-01-03 - Release 0.2.4
+### Summary
+Fixed issue in which Debian install was not consistently calling apt_update and the helix-gitswarm
+package was not found. Added some beaker testing.
+
 ## 2015-12-21 - Release 0.2.2
 ### Summary
 Cleaned up pkg to make it smaller -- was accidentally bundling testing gems
